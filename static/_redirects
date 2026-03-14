@@ -1,0 +1,8 @@
+# GOAL Agile — Netlify Redirects
+# Docusaurus static site with i18n (en / es)
+
+# ── Spanish locale fallback ──────────────────────────────────
+/es/*   /es/index.html   200
+
+# ── Default locale (English) — SPA fallback ─────────────────
+/*      /index.html      200

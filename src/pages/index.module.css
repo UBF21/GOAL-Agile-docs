@@ -1,0 +1,362 @@
+/**
+ * GOAL Agile Homepage Styles
+ */
+
+/* ===== HERO ===== */
+.heroBanner {
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0B1220 0%, #0F2040 55%, #061830 100%);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  color: #F8FAFC !important;
+}
+
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: #94A3B8 !important;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.buttonOutlineLight {
+  color: #F8FAFC !important;
+  border-color: rgba(248, 250, 252, 0.5) !important;
+}
+
+.buttonOutlineLight:hover {
+  color: #F8FAFC !important;
+  border-color: #F8FAFC !important;
+  background: rgba(248, 250, 252, 0.1) !important;
+}
+
+.heroBadges {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(20, 184, 166, 0.15);
+  color: #14B8A6 !important;
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+/* ===== SECTION SHARED ===== */
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== FEATURES SECTION ===== */
+.featuresSection {
+  padding: 5rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.featureCol {
+  margin-bottom: 2rem;
+}
+
+.featureCard {
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  height: 100%;
+  background: var(--ifm-card-background-color);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.featureCard:hover {
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.12);
+  border-color: #06B6D4;
+  transform: translateY(-2px);
+}
+
+.featureIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+/* ===== MANIFESTO SECTION ===== */
+.manifestoSection {
+  padding: 5rem 0;
+  background: var(--ifm-background-color);
+}
+
+.manifestoSubtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+}
+
+.manifestoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.manifestoItem {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-background-surface-color);
+}
+
+.manifestoValue {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.manifestoLeft {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.manifestoOver {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-500);
+  font-style: italic;
+}
+
+.manifestoRight {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-600);
+  text-decoration: line-through;
+  text-decoration-color: var(--ifm-color-emphasis-400);
+}
+
+.manifestoDesc {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.manifestoCta {
+  text-align: center;
+}
+
+/* ===== COMPARISON SECTION ===== */
+.comparisonSection {
+  padding: 5rem 0 6rem;
+  background: var(--ifm-background-color);
+}
+
+.comparisonSubtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* grid: dim | scrum | kanban | goal */
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-toc-border-color);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+}
+
+/* ── header row ── */
+.cmpHeader {
+  display: contents;
+}
+
+.cmpHeaderCell {
+  padding: 1rem 1.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-emphasis-600);
+  border-bottom: 2px solid var(--ifm-toc-border-color);
+}
+
+.cmpHeaderCellGoal {
+  padding: 1rem 1.25rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #0B1220 0%, #0F2040 100%);
+  color: #14B8A6;
+  border-bottom: 2px solid #14B8A6;
+  position: relative;
+}
+
+.cmpHeaderCellGoal::after {
+  content: '✦ BEST';
+  position: absolute;
+  top: 0.35rem;
+  right: 0.75rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #14B8A6;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+/* ── data rows ── */
+.cmpRow {
+  display: contents;
+}
+
+.cmpRow:last-child .cmpCell,
+.cmpRow:last-child .cmpCellGoal,
+.cmpRow:last-child .cmpDimension {
+  border-bottom: none;
+}
+
+.cmpDimension {
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  display: flex;
+  align-items: center;
+}
+
+.cmpCell {
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+  background: var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  border-left: 1px solid var(--ifm-toc-border-color);
+  display: flex;
+  align-items: center;
+}
+
+.cmpCellGoal {
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  background: linear-gradient(135deg, #0B1220 0%, #0F2040 100%);
+  border-bottom: 1px solid rgba(30,41,59,0.8);
+  border-left: 2px solid #14B8A6;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cmpCellGoal::before {
+  content: '→';
+  color: #14B8A6;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.comparisonCta {
+  text-align: center;
+}
+
+/* ===== FOOTER CTA SECTION ===== */
+.footerCtaSection {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #0B1220 0%, #0F2040 100%);
+  color: #ffffff;
+}
+
+.footerCtaContent {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.footerCtaTitle {
+  color: #F8FAFC !important;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.footerCtaText {
+  font-size: 1.1rem;
+  color: #94A3B8 !important;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.footerCtaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .footerCtaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

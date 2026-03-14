@@ -1,0 +1,66 @@
+{
+  "link.item.label.Introducción": {
+    "message": "Introducción",
+    "description": "Footer link: Introducción"
+  },
+  "link.item.label.Manifiesto": {
+    "message": "Manifiesto",
+    "description": "Footer link: Manifiesto"
+  },
+  "link.item.label.Quick Start": {
+    "message": "Inicio Rápido",
+    "description": "Footer link: Quick Start"
+  },
+  "link.item.label.Overview": {
+    "message": "Descripción General",
+    "description": "Footer link: Overview"
+  },
+  "link.item.label.Flow Board": {
+    "message": "Flow Board",
+    "description": "Footer link: Flow Board"
+  },
+  "link.item.label.WIP Limits": {
+    "message": "Límites de WIP",
+    "description": "Footer link: WIP Limits"
+  },
+  "link.item.label.Metrics System": {
+    "message": "Sistema de Métricas",
+    "description": "Footer link: Metrics System"
+  },
+  "link.item.label.Certification Overview": {
+    "message": "Descripción de Certificación",
+    "description": "Footer link: Certification Overview"
+  },
+  "link.item.label.GOAL Practitioner (GP)": {
+    "message": "GOAL Practitioner (GP)",
+    "description": "Footer link: GP"
+  },
+  "link.item.label.Rules Summary": {
+    "message": "Resumen de Reglas",
+    "description": "Footer link: Rules Summary"
+  },
+  "link.item.label.Glossary": {
+    "message": "Glosario",
+    "description": "Footer link: Glossary"
+  },
+  "link.item.label.Anti-Patterns": {
+    "message": "Anti-Patrones",
+    "description": "Footer link: Anti-Patterns"
+  },
+  "link.title.Framework": {
+    "message": "Framework",
+    "description": "Footer column title: Framework"
+  },
+  "link.title.Learn": {
+    "message": "Aprender",
+    "description": "Footer column title: Learn"
+  },
+  "link.title.Reference": {
+    "message": "Referencia",
+    "description": "Footer column title: Reference"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 Instituto GOAL Agile. Creado por Felipe Montenegro.",
+    "description": "The footer copyright"
+  }
+}
