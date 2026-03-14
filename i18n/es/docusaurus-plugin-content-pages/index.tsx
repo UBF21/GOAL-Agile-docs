@@ -263,7 +263,7 @@ function AuthorSection() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/UBF21/GOAL-Agile-docs"
+                href="https://github.com/UBF21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.authorLinkBtn}>
