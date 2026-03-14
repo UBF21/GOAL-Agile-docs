@@ -44,24 +44,9 @@ Delivery over activity    ·    Adaptation over commitment
 
 ---
 
-## Documentation site
+## Documentation
 
-This repo contains the full documentation site built with **Docusaurus**, supporting **English** and **Spanish**.
-
-**Run locally:**
-
-```bash
-bun install
-bun start
-```
-
-**Build for production:**
-
-```bash
-bun run build
-```
-
----
+This repo contains the full GOAL documentation site, available in **English** and **Spanish**.
 
 ## What's covered
 
@@ -74,33 +59,6 @@ bun run build
 - **Guides** — Board Templates, Workflow Diagrams (Mermaid), Tooling Integration (Jira, Linear, Trello, Notion)
 - **Certification** — Practitioner, Flow Master Certified, Program Lead
 - **Adoption** — FAQ (46 questions), Pilot Program Guide (3-cycle structure)
-
----
-
-## Project structure
-
-```
-goal-docs/
-├── docs/                  # English documentation (~50 pages)
-├── i18n/es/               # Spanish translations
-├── src/pages/             # Custom homepage
-├── src/css/custom.css     # Brand CSS tokens
-├── static/img/            # Logo assets
-├── static/_redirects      # Netlify routing
-├── docusaurus.config.ts   # Site config (i18n, navbar, mermaid)
-└── sidebars.ts            # Navigation structure
-```
-
----
-
-## Deploy to Netlify
-
-```bash
-bun run build
-# Drag the build/ folder to Netlify's deploy drop zone
-```
-
-The `static/_redirects` file is automatically included in the build and handles SPA routing for both locales.
 
 ---
 

@@ -7,7 +7,66 @@ description: How to start using GOAL Agile in your team — a phase-by-phase imp
 
 # Quick Start: Implementing GOAL in Your Team
 
-GOAL is designed to be adopted progressively. You do not need to implement every element from day one. This guide walks you through Phase 1 — enough to complete your first full Goal Cycle — with pointers to deeper content for each component.
+## What is GOAL?
+
+GOAL (Goal-Oriented Adaptive Lifecycle) is an agile methodology that combines the structure of Scrum with the flow intelligence of Kanban — while adding original concepts neither framework provides.
+
+Instead of time-boxed sprints that end on a calendar date, GOAL uses **Goal Cycles** that close when outcomes are achieved. Work is managed through a **Flow Board** with WIP limits that prevent overload. Three roles — **Flow Master**, **Product Strategist**, and **Delivery Team** — own distinct responsibilities.
+
+```mermaid
+graph TD
+  PS[Product Strategist\nDefines goals & value] --> SC[Smart Planning\nGoals + initial tasks]
+  SC --> FC[Goal Cycle\nWork happens here]
+  FC --> DFS[Daily Flow Sync\n10 min · board-first]
+  DFS --> FC
+  FC --> GR[Goal Review\nOutcomes achieved?]
+  GR -->|Yes — cycle closes| RETRO[Retrospective\nData-driven]
+  GR -->|No — adjust| FC
+  RETRO --> SC
+
+  FM[Flow Master\nProtects flow & WIP] -.-> DFS
+  FM -.-> FC
+```
+
+### The three roles
+
+| Role | Equivalent | Core responsibility |
+|------|-----------|---------------------|
+| **Flow Master** | Scrum Master | Enforces WIP limits, runs Daily Flow Sync, removes blockers |
+| **Product Strategist** | Product Owner | Defines cycle goals, measures value delivered |
+| **Delivery Team** | Dev Team | Self-organizes execution, flags blockers immediately |
+
+### The Flow Board
+
+Work moves left to right. WIP limits apply to active columns (In Progress + Code Review + Validation).
+
+```mermaid
+graph LR
+  B[Backlog] --> R[Ready]
+  R --> IP[In Progress]
+  IP --> CR[Code Review]
+  CR --> V[Validation]
+  V --> D[Done ✓]
+
+  style IP fill:#0284C7,color:#fff
+  style CR fill:#0284C7,color:#fff
+  style V fill:#0284C7,color:#fff
+```
+
+Three special lanes run parallel to the main flow:
+
+- **Blocked** — tasks that cannot progress (escalation clock starts immediately)
+- **Expedite** — urgent approved interruptions (max 1 active at any time)
+- **Technical Debt** — debt-reduction work (default 15% of capacity)
+
+### The Goal Cycle
+
+Unlike a fixed sprint, a Goal Cycle ends when primary goals are met — not when a calendar date arrives. Each cycle has:
+
+- **1–3 Primary Goals** — outcome statements the team commits to
+- **1–2 Secondary Goals** — nice-to-haves if capacity allows
+- **WIP Limit** — calculated as `Team Size × Focus Factor` (0.6–0.8)
+- **Tasks sized S/M/L** — no story points
 
 ---
 
@@ -64,7 +123,7 @@ You can use any tool. See the [Tooling Integration Guide](/docs/guides/tooling-i
 
 ### Step 3: Define Your WIP Limit
 
-Calculate your WIP limit using the formula:
+The WIP limit is the maximum number of tasks allowed in **In Progress + Code Review + Validation** at any given time. It prevents the team from spreading too thin.
 
 ```
 WIP Limit = Team Size × Focus Factor
@@ -80,8 +139,6 @@ WIP Limit = Team Size × Focus Factor
 | Frequent interruptions or dependencies | 0.6 |
 
 **Example:** Team of 5, new to GOAL → 5 × 0.6 = 3 active tasks maximum
-
-This limit applies to tasks in **In Progress + Code Review + Validation** combined.
 
 ---
 
@@ -106,7 +163,7 @@ Add any team-specific criteria in Level 2. Write it down. Post it on the board o
 
 ### Step 5: Calibrate S/M/L Task Sizing
 
-Define what Small, Medium, and Large mean for **your team**:
+Instead of story points, GOAL uses three sizes — Small, Medium, Large. Define what they mean for **your team**:
 
 | Size | Definition | Maximum time |
 |------|------------|-------------|
@@ -119,6 +176,8 @@ Define what Small, Medium, and Large mean for **your team**:
 ---
 
 ### Step 6: Run Your First Smart Planning Session
+
+Smart Planning is how a Goal Cycle begins. It sets outcomes, not task lists.
 
 **Duration:** 30–60 minutes
 **Who:** All roles
@@ -141,11 +200,8 @@ After planning: seed the Flow Board with an initial 2–3 tasks per goal. More t
 
 ### Step 7: Run the Daily Flow Sync Every Day
 
-**Duration:** 10–12 minutes — strictly enforced
-**Who:** Full team
-**Format:** Walk the board right to left (Done → Validation → Code Review → In Progress → Ready)
+The Daily Flow Sync is a 10–12 minute board walk — not a status meeting. The team walks the board **right to left** (Done → Validation → Code Review → In Progress → Ready), asking three questions:
 
-Three questions only:
 1. What moved forward since yesterday?
 2. What is blocked or at risk of being blocked?
 3. What is slowing the flow?
@@ -156,7 +212,7 @@ This replaces your existing daily standup. If it takes more than 12 minutes, it 
 
 ### Step 8: Handle Blockers Immediately
 
-When a task cannot progress, move it to the **Blocked** column immediately and complete a Block Register entry:
+When a task cannot progress, move it to the **Blocked** lane immediately and record:
 
 - Task name and date blocked
 - What specifically is preventing progress
@@ -164,7 +220,13 @@ When a task cannot progress, move it to the **Blocked** column immediately and c
 - What action is being taken right now
 - Expected resolution date
 
-**Escalation clock:** Hour 0 — task owner tries to resolve | Hour 24 — Flow Master assists | Hour 48 — formal escalation
+**Escalation clock:**
+
+```mermaid
+graph LR
+  H0[Hour 0\nTask owner tries to resolve] --> H24[Hour 24\nFlow Master assists]
+  H24 --> H48[Hour 48\nFormal escalation]
+```
 
 ---
 
