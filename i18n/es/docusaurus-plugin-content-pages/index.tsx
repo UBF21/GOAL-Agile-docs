@@ -244,6 +244,39 @@ function WhyGoalSection() {
   );
 }
 
+function AuthorSection() {
+  return (
+    <section className={styles.authorSection}>
+      <div className="container">
+        <div className={styles.authorCard}>
+          <div className={styles.authorAvatar}>FM</div>
+          <div className={styles.authorInfo}>
+            <p className={styles.authorLabel}>Creado por</p>
+            <h3 className={styles.authorName}>Felipe Rafael Montenegro Morriberon</h3>
+            <p className={styles.authorRole}>Desarrollador de Software</p>
+            <div className={styles.authorLinks}>
+              <a
+                href="https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.authorLinkBtn}>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/UBF21/GOAL-Agile-docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.authorLinkBtn}>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FooterCtaSection() {
   return (
     <section className={styles.footerCtaSection}>
@@ -284,6 +317,7 @@ export default function Home(): ReactNode {
         <FeaturesSection />
         <ManifestoSection />
         <WhyGoalSection />
+        <AuthorSection />
         <FooterCtaSection />
       </main>
     </Layout>

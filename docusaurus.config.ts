@@ -118,7 +118,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/goal-agile/goal-methodology',
+          href: 'https://github.com/UBF21/GOAL-Agile-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -153,11 +153,11 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/goal-agile/goal-methodology',
+              href: 'https://github.com/UBF21/GOAL-Agile-docs',
             },
             {
               label: 'Discussions',
-              href: 'https://github.com/goal-agile/goal-methodology/discussions',
+              href: 'https://github.com/UBF21/GOAL-Agile-docs/discussions',
             },
           ],
         },
@@ -178,8 +178,25 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: 'Author',
+          items: [
+            {
+              label: 'Felipe R. Montenegro',
+              href: 'https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/',
+            },
+            {
+              label: 'Software Developer',
+              href: 'https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/',
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} GOAL Agile. Author: Felipe Montenegro. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} GOAL Agile — Created by <a href="https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/" target="_blank" rel="noopener noreferrer">Felipe Rafael Montenegro Morriberon</a>. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
