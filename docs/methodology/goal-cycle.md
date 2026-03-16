@@ -9,6 +9,31 @@ description: The GOAL Cycle — how it works, termination modes, goal stability 
 
 The Goal Cycle is GOAL's replacement for the Scrum Sprint. It is a time-bounded work period focused on achieving defined outcomes.
 
+```mermaid
+graph TD
+    SP["Smart Planning Session\nDefine goals · Set WIP limit · Seed Flow Board"]
+    AC["Active Cycle\nContinuous delivery on Flow Board"]
+    DFS["Daily Flow Sync\n10–12 min · Board-focused"]
+    GR["Goal Review\nValidate goals against DoD"]
+    RET["Data-Driven Retrospective\nMetrics review · Improvements"]
+    NEXT["Next Goal Cycle\nBegins immediately after"]
+
+    SP --> AC
+    AC --> DFS
+    DFS -->|"goals not yet complete"| AC
+    DFS -->|"goals complete"| GR
+    GR --> RET
+    RET --> NEXT
+    NEXT -->|"continuous cadence"| SP
+
+    style SP fill:#0284C7,color:#fff,stroke:#0284C7
+    style AC fill:#0369A1,color:#fff,stroke:#0369A1
+    style DFS fill:#1E293B,color:#fff,stroke:#334155
+    style GR fill:#14B8A6,color:#fff,stroke:#14B8A6
+    style RET fill:#0F766E,color:#fff,stroke:#0F766E
+    style NEXT fill:#0284C7,color:#fff,stroke:#0284C7
+```
+
 ---
 
 ## Key Distinction from Scrum Sprint

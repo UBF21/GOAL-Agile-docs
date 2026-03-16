@@ -39,6 +39,28 @@ This means teams commit to outcomes, not to specific task lists. The path to rea
 - Reduced developer burnout through cognitive load control
 - Transparent project visibility for stakeholders
 
+```mermaid
+graph TD
+    R["🧑‍💼 Roles\nFlow Master · Product Strategist · Delivery Team"]
+    E["📅 Events\nSmart Planning · Daily Flow Sync\nBacklog Grooming · Goal Review · Retrospective"]
+    B["📋 Flow Board\nReady → In Progress → Review → Done"]
+    M["📊 Metrics\nFlow Efficiency · Cycle Time · Block Rate"]
+    P["⚙️ Protocols\nInterrupt · Blocked Task · WIP Enforcement"]
+
+    R -->|"runs events"| E
+    E -->|"drives work on"| B
+    B -->|"generates data for"| M
+    M -->|"informs"| E
+    P -->|"governs"| B
+    R -->|"follows"| P
+
+    style R fill:#0284C7,color:#fff,stroke:#0284C7
+    style E fill:#0369A1,color:#fff,stroke:#0369A1
+    style B fill:#14B8A6,color:#fff,stroke:#14B8A6
+    style M fill:#0F766E,color:#fff,stroke:#0F766E
+    style P fill:#1E293B,color:#fff,stroke:#334155
+```
+
 ---
 
 ## Problem Statement

@@ -17,6 +17,29 @@ description: The GOAL Data-Driven Retrospective — a metrics-based process impr
 
 ---
 
+```mermaid
+graph TD
+    PRE["Prepare Flow Metrics Dashboard\nBefore the session — not during"]
+    S1["Step 1 · 15 min\nFlow Metrics Review\nCycle Time · Flow Efficiency\nBlock Rate · Delivery Rate · WIP Compliance"]
+    S2["Step 2 · 10 min\nBlock Register Analysis\nBlocker types · Resolution time · Recurring patterns"]
+    S3["Step 3 · 15 min\nIdentify Improvements\nSelect 1–3 only · Assign owners · Link to metrics"]
+    S4["Step 4 · 10 min\nReview Previous Improvements\nDid last cycle's changes work?"]
+    OUT["Close\nSummarize improvements · Move to Smart Planning"]
+
+    PRE --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> S4
+    S4 --> OUT
+
+    style PRE fill:#1E293B,color:#fff,stroke:#334155
+    style S1 fill:#0284C7,color:#fff,stroke:#0284C7
+    style S2 fill:#0369A1,color:#fff,stroke:#0369A1
+    style S3 fill:#14B8A6,color:#fff,stroke:#14B8A6
+    style S4 fill:#0F766E,color:#fff,stroke:#0F766E
+    style OUT fill:#1E293B,color:#fff,stroke:#334155
+```
+
 ## What Makes It Data-Driven
 
 The fundamental rule of the GOAL retrospective:

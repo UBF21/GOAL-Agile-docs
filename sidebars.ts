@@ -84,6 +84,7 @@ const sidebars: SidebarsConfig = {
         'guides/tooling-integration',
         'guides/adoption-playbook',
         'guides/retrospective-patterns',
+        'guides/pilot-program',
       ],
     },
     {
@@ -104,6 +105,7 @@ const sidebars: SidebarsConfig = {
         'reference/glossary',
         'reference/anti-patterns',
         'reference/rules-summary',
+        'reference/faq',
         'reference/comparison',
       ],
     },
