@@ -3,39 +3,48 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
 function HeroSection() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
-          Goals are the contract.
-          <br />
-          Tasks are the path.
-        </Heading>
-        <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
-          GOAL is an adaptive agile framework for modern software teams. Commit to outcomes,
-          not task lists. Measure flow, not velocity. Deliver continuously, not in batches.
-        </p>
-        <div className={styles.heroButtons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Get Started
-          </Link>
-          <Link
-            className={clsx('button button--outline button--lg', styles.buttonOutlineLight)}
-            to="/docs/quick-start">
-            Quick Start Guide
-          </Link>
+    <header className={styles.hero}>
+      <div className={styles.heroGrid} />
+      <div className={styles.heroOrb1} />
+      <div className={styles.heroOrb2} />
+      <div className={styles.heroOrb3} />
+      <div className={styles.heroInner}>
+        <div className={styles.heroBadge}>
+          <span className={styles.heroBadgePulse} />
+          v0.2 · Open Methodology
         </div>
-        <div className={styles.heroBadges}>
-          <span className={styles.badge}>Open Methodology</span>
-          <span className={styles.badge}>v0.2</span>
-          <span className={styles.badge}>Scrum + Kanban Synthesis</span>
+        <h1 className={styles.heroTitle}>GOAL</h1>
+        <p className={styles.heroTagline}>
+          <span className={styles.heroTaglineComment}>//</span>{' '}adaptive agile framework
+        </p>
+        <div className={styles.heroStats}>
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatValue}>5</span>
+            <span className={styles.heroStatLabel}>core values</span>
+          </div>
+          <div className={styles.heroStatDivider} />
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatValue}>Flow</span>
+            <span className={styles.heroStatLabel}>metrics</span>
+          </div>
+          <div className={styles.heroStatDivider} />
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatValue}>Scrum</span>
+            <span className={styles.heroStatLabel}>+ Kanban</span>
+          </div>
+        </div>
+        <div className={styles.heroCta}>
+          <Link className={styles.btnPrimary} to="/docs/quick-start">
+            Get started →
+          </Link>
+          <Link className={styles.btnSecondary} to="/docs/intro">
+            Read the docs
+          </Link>
         </div>
       </div>
     </header>
@@ -87,29 +96,28 @@ const features: FeatureItem[] = [
   },
 ];
 
+function FeatureCard({ icon, title, description, index }: FeatureItem & { index: number }) {
+  return (
+    <div className={styles.featureCard} style={{ animationDelay: `${index * 80}ms` }}>
+      <span className={styles.featureNumber}>{String(index + 1).padStart(2, '0')}</span>
+      <div className={styles.featureIconWrap}>
+        <span className={styles.featureIconGlyph}>{icon}</span>
+      </div>
+      <h3 className={styles.featureTitle}>{title}</h3>
+      <p className={styles.featureDescription}>{description}</p>
+    </div>
+  );
+}
+
 function FeaturesSection() {
   return (
     <section className={styles.featuresSection}>
       <div className="container">
-        <div className="row">
-          <div className="col col--12">
-            <Heading as="h2" className={styles.sectionTitle}>
-              What GOAL brings to your team
-            </Heading>
-          </div>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>What GOAL brings to your team</h2>
         </div>
-        <div className="row">
-          {features.map((feature) => (
-            <div key={feature.title} className={clsx('col col--4', styles.featureCol)}>
-              <div className={styles.featureCard}>
-                <div className={styles.featureIcon}>{feature.icon}</div>
-                <Heading as="h3" className={styles.featureTitle}>
-                  {feature.title}
-                </Heading>
-                <p className={styles.featureDescription}>{feature.description}</p>
-              </div>
-            </div>
-          ))}
+        <div className={styles.featuresGrid}>
+          {features.map((f, i) => <FeatureCard key={f.title} {...f} index={i} />)}
         </div>
       </div>
     </section>
@@ -127,10 +135,11 @@ function ManifestoSection() {
 
   return (
     <section className={styles.manifestoSection}>
+      <div className={styles.manifestoDivider} />
       <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle}>
           The GOAL Manifesto
-        </Heading>
+        </h2>
         <p className={styles.manifestoSubtitle}>
           Five values that guide every decision in the framework.
           When in doubt, check against the manifesto.
@@ -207,9 +216,9 @@ function WhyGoalSection() {
   return (
     <section className={styles.comparisonSection}>
       <div className="container">
-        <Heading as="h2" className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle}>
           Why GOAL?
-        </Heading>
+        </h2>
         <p className={styles.comparisonSubtitle}>
           GOAL synthesizes the structural benefits of Scrum with the flow intelligence of Kanban —
           and adds original contributions that neither framework provides.
@@ -249,7 +258,10 @@ function AuthorSection() {
       <div className="container">
         <div className={styles.authorInner}>
           <p className={styles.authorEyebrow}>About the author</p>
-          <div className={styles.authorAvatar}>FM</div>
+          <div className={styles.avatarRingWrap}>
+            <div className={styles.avatarRing} aria-hidden="true" />
+            <div className={styles.authorAvatar}>FM</div>
+          </div>
           <h3 className={styles.authorName}>Felipe Rafael Montenegro Morriberon</h3>
           <p className={styles.authorRole}>Software Developer &amp; Creator of GOAL Agile</p>
           <p className={styles.authorBio}>
@@ -289,9 +301,9 @@ function FooterCtaSection() {
     <section className={styles.footerCtaSection}>
       <div className="container">
         <div className={styles.footerCtaContent}>
-          <Heading as="h2" className={styles.footerCtaTitle}>
+          <h2 className={styles.footerCtaTitle}>
             Ready to adopt GOAL?
-          </Heading>
+          </h2>
           <p className={styles.footerCtaText}>
             Start with the Quick Start guide to implement GOAL Phase 1 in your team this week.
             Or explore the full methodology documentation.
