@@ -5,6 +5,11 @@ sidebar_position: 3
 description: How to start using GOAL Agile in your team — a phase-by-phase implementation roadmap.
 ---
 
+import Drawio from '@theme/Drawio'
+import GoalCycleOverview from '!!raw-loader!./diagrams/goal-cycle-lifecycle.drawio'
+import FlowBoardDiagram from '!!raw-loader!./diagrams/flow-board.drawio'
+import BlockedSimple from '!!raw-loader!./diagrams/blocked-escalation.drawio'
+
 # Quick Start: Implementing GOAL in Your Team
 
 ## What is GOAL?
@@ -13,20 +18,7 @@ GOAL (Goal-Oriented Adaptive Lifecycle) is an agile methodology that combines th
 
 Instead of time-boxed sprints that end on a calendar date, GOAL uses **Goal Cycles** that close when outcomes are achieved. Work is managed through a **Flow Board** with WIP limits that prevent overload. Three roles — **Flow Master**, **Product Strategist**, and **Delivery Team** — own distinct responsibilities.
 
-```mermaid
-graph TD
-  PS[Product Strategist\nDefines goals & value] --> SC[Smart Planning\nGoals + initial tasks]
-  SC --> FC[Goal Cycle\nWork happens here]
-  FC --> DFS[Daily Flow Sync\n10 min · board-first]
-  DFS --> FC
-  FC --> GR[Goal Review\nOutcomes achieved?]
-  GR -->|Yes — cycle closes| RETRO[Retrospective\nData-driven]
-  GR -->|No — adjust| FC
-  RETRO --> SC
-
-  FM[Flow Master\nProtects flow & WIP] -.-> DFS
-  FM -.-> FC
-```
+<Drawio content={GoalCycleOverview} />
 
 ### The three roles
 
@@ -40,18 +32,7 @@ graph TD
 
 Work moves left to right. WIP limits apply to active columns (In Progress + Code Review + Validation).
 
-```mermaid
-graph LR
-  B[Backlog] --> R[Ready]
-  R --> IP[In Progress]
-  IP --> CR[Code Review]
-  CR --> V[Validation]
-  V --> D[Done ✓]
-
-  style IP fill:#0284C7,color:#fff
-  style CR fill:#0284C7,color:#fff
-  style V fill:#0284C7,color:#fff
-```
+<Drawio content={FlowBoardDiagram} />
 
 Three special lanes run parallel to the main flow:
 
@@ -222,11 +203,7 @@ When a task cannot progress, move it to the **Blocked** lane immediately and rec
 
 **Escalation clock:**
 
-```mermaid
-graph LR
-  H0[Hour 0\nTask owner tries to resolve] --> H24[Hour 24\nFlow Master assists]
-  H24 --> H48[Hour 48\nFormal escalation]
-```
+<Drawio content={BlockedSimple} />
 
 ---
 

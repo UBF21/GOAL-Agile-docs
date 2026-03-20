@@ -5,27 +5,14 @@ sidebar_position: 3
 description: The three primary GOAL roles — Flow Master, Product Strategist, and Delivery Team — with responsibilities, authority, and success metrics.
 ---
 
+import Drawio from '@theme/Drawio'
+import RoleDiagram from '!!raw-loader!../diagrams/role-interaction.drawio'
+
 # Roles
 
 GOAL defines three primary roles. The responsibilities are distinct from Scrum's roles even where names look similar. Understanding the distinctions prevents the most common adoption failures.
 
-```mermaid
-graph LR
-    FM["Flow Master\nGuards process & flow"]
-    PS["Product Strategist\nOwns goals & value"]
-    DT["Delivery Team\nExecutes & self-organizes"]
-
-    PS -->|"defines goals for"| FM
-    FM -->|"sets WIP limits &\nprotects capacity of"| DT
-    PS -->|"responds to\ninterrupt requests from"| DT
-    DT -->|"flags blockers to"| FM
-    FM -->|"jointly approves\nExpedite lane with"| PS
-    DT -->|"demonstrates work at\nGoal Review to"| PS
-
-    style FM fill:#0284C7,color:#fff,stroke:#0284C7
-    style PS fill:#14B8A6,color:#fff,stroke:#14B8A6
-    style DT fill:#1E293B,color:#fff,stroke:#334155
-```
+<Drawio content={RoleDiagram} />
 
 ---
 

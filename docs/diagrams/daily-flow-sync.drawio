@@ -1,0 +1,118 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="daily-flow-sync" name="Daily Flow Sync">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="640" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="592" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="Daily Flow Sync" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="38" width="1052" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="15 min hard limit  ·  Led by Flow Master  ·  Board walk right-to-left" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="24" y="66" width="1052" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 4 step cards, left side -->
+        <!-- Step 1 -->
+        <mxCell id="s1" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#34D399;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="148" y="104" width="504" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s1n" value="01" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=22;fontStyle=1;fontColor=#34D399;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="160" y="116" width="52" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s1t" value="What moved forward?" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="216" y="116" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s1tm" value="3 min" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontSize=11;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="504" y="116" width="136" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s1d" value="Review Done column · Celebrate completed tasks · Archive or add to demo list" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="216" y="142" width="424" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2 -->
+        <mxCell id="s2" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#EF4444;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="148" y="212" width="504" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s2n" value="02" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=22;fontStyle=1;fontColor=#EF4444;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="160" y="224" width="52" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s2t" value="What is blocked or at risk?" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="216" y="224" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s2tm" value="4 min" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontSize=11;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="504" y="224" width="136" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s2d" value="Flag blockers → Block Register entry · Escalate per protocol if &gt;24h" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="216" y="250" width="424" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3 -->
+        <mxCell id="s3" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#F59E0B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="148" y="320" width="504" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s3n" value="03" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=22;fontStyle=1;fontColor=#F59E0B;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="160" y="332" width="52" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s3t" value="WIP Limit Check" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="216" y="332" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s3tm" value="3 min" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontSize=11;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="504" y="332" width="136" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s3d" value="Count active tasks vs WIP limit · No new pulls if at limit · Enforce immediately" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="216" y="358" width="424" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4 -->
+        <mxCell id="s4" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#14B8A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="148" y="428" width="504" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4n" value="04" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=22;fontStyle=1;fontColor=#14B8A6;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="160" y="440" width="52" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s4t" value="Goal Progress Pulse" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="216" y="440" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s4tm" value="3 min" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontSize=11;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="504" y="440" width="136" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s4d" value="Are primary goals on track? · Surface risks or dependencies · Flag if Goal Review needed" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="216" y="466" width="424" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Close -->
+        <mxCell id="close" value="Sync Done  ·  Team returns to work" style="ellipse;whiteSpace=wrap;html=1;fillColor=#34D399;strokeColor=#0B1220;fontColor=#0B1220;fontSize=13;fontStyle=1;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="248" y="536" width="416" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Right panel: rules -->
+        <mxCell id="rules_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#06B6D4;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="692" y="104" width="356" height="404" as="geometry" />
+        </mxCell>
+        <mxCell id="rules_t" value="Anti-patterns to avoid" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#06B6D4;" vertex="1" parent="1">
+          <mxGeometry x="692" y="116" width="356" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="rules_b" value="✗  Going over 15 minutes&#xa;✗  Status reports instead of board walk&#xa;✗  Problem-solving in the sync&#xa;✗  One person talking &gt;2 min&#xa;✗  Skipping the board, talking abstractly&#xa;✗  Discussing tasks not on the board&#xa;✗  Waiting for absent team members&#xa;&#xa;──────────────&#xa;&#xa;If it takes &gt;15 min → the sync&#xa;is being run incorrectly." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="708" y="152" width="324" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" edge="1" source="s1" target="s2" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" source="s2" target="s3" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" source="s3" target="s4" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" source="s4" target="close" parent="1" style="curved=1;html=1;strokeColor=#34D399;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

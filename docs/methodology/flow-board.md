@@ -5,6 +5,9 @@ sidebar_position: 5
 description: The GOAL Flow Board — standard columns, special lanes, task card anatomy, and aging indicators.
 ---
 
+import Drawio from '@theme/Drawio'
+import FlowBoardColumnsDiagram from '!!raw-loader!../diagrams/flow-board-columns.drawio'
+
 # Flow Board
 
 The Flow Board is the central visual management tool in GOAL. It represents every piece of active work and its current state. It is the primary data source for flow metrics, the Daily Flow Sync, and the Data-Driven Retrospective.
@@ -12,6 +15,8 @@ The Flow Board is the central visual management tool in GOAL. It represents ever
 ---
 
 ## Standard Columns
+
+<Drawio content={FlowBoardColumnsDiagram} />
 
 ```
 Backlog → Ready → In Progress → Code Review → Validation → Done

@@ -5,6 +5,11 @@ sidebar_position: 6
 description: Work In Progress limits in GOAL — the formula, Focus Factor selection, authority model, and what to do when WIP is full.
 ---
 
+import Drawio from '@theme/Drawio'
+import WipFormulaDiagram from '!!raw-loader!../diagrams/wip-formula.drawio'
+import WipPriorityDiagram from '!!raw-loader!../diagrams/wip-priority-order.drawio'
+import FocusRatioDiagram from '!!raw-loader!../diagrams/focus-ratio.drawio'
+
 # WIP Limits
 
 WIP (Work In Progress) limits are one of the most powerful and most frequently violated elements of GOAL. Understanding why they exist — not just what they are — is essential for enforcing them under pressure.
@@ -36,6 +41,8 @@ WIP limits force the team to **finish before starting**. This is counterintuitiv
 ---
 
 ## Dynamic WIP Formula
+
+<Drawio content={WipFormulaDiagram} />
 
 GOAL uses a formula rather than a fixed number to keep WIP limits adapted to actual team size:
 
@@ -96,6 +103,8 @@ Round to the nearest whole number.
 
 ## What to Do When WIP Is Full
 
+<Drawio content={WipPriorityDiagram} />
+
 When the WIP limit is reached and a team member has no active task, the priority order is:
 
 ```
@@ -112,6 +121,8 @@ This order reinforces GOAL's principle of **finishing before starting**. The mos
 ---
 
 ## Focus Ratio — Monitoring WIP Health
+
+<Drawio content={FocusRatioDiagram} />
 
 ```
 Focus Ratio = Active tasks (In Progress + Code Review + Validation) ÷ WIP Limit

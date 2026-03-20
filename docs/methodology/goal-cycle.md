@@ -5,34 +5,16 @@ sidebar_position: 4
 description: The GOAL Cycle — how it works, termination modes, goal stability rule, scope flexibility, and typical structure.
 ---
 
+import Drawio from '@theme/Drawio'
+import GoalCycleDiagram from '!!raw-loader!../diagrams/goal-cycle-lifecycle.drawio'
+import CycleStructureDiagram from '!!raw-loader!../diagrams/cycle-structure.drawio'
+import CycleExtensionDiagram from '!!raw-loader!../diagrams/cycle-extension.drawio'
+
 # The Goal Cycle
 
 The Goal Cycle is GOAL's replacement for the Scrum Sprint. It is a time-bounded work period focused on achieving defined outcomes.
 
-```mermaid
-graph TD
-    SP["Smart Planning Session\nDefine goals · Set WIP limit · Seed Flow Board"]
-    AC["Active Cycle\nContinuous delivery on Flow Board"]
-    DFS["Daily Flow Sync\n10–12 min · Board-focused"]
-    GR["Goal Review\nValidate goals against DoD"]
-    RET["Data-Driven Retrospective\nMetrics review · Improvements"]
-    NEXT["Next Goal Cycle\nBegins immediately after"]
-
-    SP --> AC
-    AC --> DFS
-    DFS -->|"goals not yet complete"| AC
-    DFS -->|"goals complete"| GR
-    GR --> RET
-    RET --> NEXT
-    NEXT -->|"continuous cadence"| SP
-
-    style SP fill:#0284C7,color:#fff,stroke:#0284C7
-    style AC fill:#0369A1,color:#fff,stroke:#0369A1
-    style DFS fill:#1E293B,color:#fff,stroke:#334155
-    style GR fill:#14B8A6,color:#fff,stroke:#14B8A6
-    style RET fill:#0F766E,color:#fff,stroke:#0F766E
-    style NEXT fill:#0284C7,color:#fff,stroke:#0284C7
-```
+<Drawio content={GoalCycleDiagram} />
 
 ---
 
@@ -63,6 +45,8 @@ If all primary goals are completed before the estimated end date, the cycle clos
 **Why this matters:** The goal was the commitment, not the time block. If goals are achieved, the cycle's purpose is fulfilled. Teams should not manufacture work to fill a calendar slot.
 
 ### Extended Closure — Goals Require More Time
+
+<Drawio content={CycleExtensionDiagram} />
 
 If primary goals are not completed by the estimated end date, the cycle extends. The extension is formal and documented:
 
@@ -155,6 +139,8 @@ Within a cycle, the tasks used to achieve a goal are **completely flexible**.
 ---
 
 ## Typical Cycle Structure
+
+<Drawio content={CycleStructureDiagram} />
 
 ```
 Week 1, Day 1:   Smart Planning Session

@@ -5,6 +5,9 @@ sidebar_position: 1
 description: The GOAL Smart Planning Session — purpose, agenda, timing, and how to run it effectively.
 ---
 
+import Drawio from '@theme/Drawio'
+import SmartPlanningDiagram from '!!raw-loader!../diagrams/smart-planning-process.drawio'
+
 # Smart Planning Session
 
 **Purpose:** Define the goals and initial work shape for an upcoming Goal Cycle.
@@ -17,31 +20,7 @@ description: The GOAL Smart Planning Session — purpose, agenda, timing, and ho
 
 ---
 
-```mermaid
-graph TD
-    S1["Step 1 · 5 min\nCycle Accuracy Review\nReview last cycle's CAI"]
-    S2["Step 2 · 5 min\nBacklog Readiness Check\nConfirm ≥2 cycles of ready items"]
-    S3["Step 3 · 20–30 min\nDefine Primary Goals\n1–3 outcome-based goals"]
-    S4["Step 4 · 5–10 min\nDefine Secondary Goals\nValueable but non-blocking"]
-    S5["Step 5 · 5 min\nSet WIP Limit\nTeam Size × Focus Factor"]
-    S6["Step 6 · 5 min\nTech Debt Allocation\nDefault 15% of capacity"]
-    OUT["Publish Goal Cycle Plan\nSeed Flow Board · Goals locked"]
-
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
-    S5 --> S6
-    S6 --> OUT
-
-    style S1 fill:#1E293B,color:#fff,stroke:#334155
-    style S2 fill:#1E293B,color:#fff,stroke:#334155
-    style S3 fill:#0284C7,color:#fff,stroke:#0284C7
-    style S4 fill:#0369A1,color:#fff,stroke:#0369A1
-    style S5 fill:#1E293B,color:#fff,stroke:#334155
-    style S6 fill:#1E293B,color:#fff,stroke:#334155
-    style OUT fill:#14B8A6,color:#fff,stroke:#14B8A6
-```
+<Drawio content={SmartPlanningDiagram} />
 
 ## Agenda
 

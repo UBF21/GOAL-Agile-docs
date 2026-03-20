@@ -1,0 +1,114 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="definition-of-done" name="Definition of Done Validation">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="800" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background card -->
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="752" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="Definition of Done — Validation Gates" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="38" width="1052" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="All 4 gates must pass before a task moves to Done" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="24" y="66" width="1052" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- START -->
+        <mxCell id="s0" value="Task ready to move to Done?" style="ellipse;whiteSpace=wrap;html=1;fillColor=#14B8A6;strokeColor=#0B1220;fontColor=#0B1220;fontSize=13;fontStyle=1;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="106" width="400" height="48" as="geometry" />
+        </mxCell>
+
+        <!-- Gate 1: Code Quality -->
+        <mxCell id="g1_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#14B8A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="202" width="980" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1_gate" value="GATE 1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontColor=#14B8A6;fontStyle=1;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="72" y="210" width="60" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="g1_title" value="Code Quality" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="72" y="228" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="g1_checks" value="✓  Tests pass (unit + integration)     ✓  Code reviewed and approved     ✓  No critical linting errors     ✓  Coverage threshold met" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="248" y="226" width="680" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Gate 2: Functional -->
+        <mxCell id="g2_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#06B6D4;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="322" width="980" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g2_gate" value="GATE 2" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontColor=#06B6D4;fontStyle=1;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="72" y="330" width="60" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="g2_title" value="Functional Requirements" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#06B6D4;" vertex="1" parent="1">
+          <mxGeometry x="72" y="348" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="g2_checks" value="✓  Acceptance criteria passed     ✓  Demo-ready for stakeholders     ✓  Edge cases handled     ✓  Documentation updated" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="288" y="346" width="640" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Gate 3: Non-Functional -->
+        <mxCell id="g3_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#8B5CF6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="442" width="980" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g3_gate" value="GATE 3" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontColor=#8B5CF6;fontStyle=1;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="72" y="450" width="60" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="g3_title" value="Non-Functional Standards" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#8B5CF6;" vertex="1" parent="1">
+          <mxGeometry x="72" y="468" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="g3_checks" value="✓  Performance benchmarks OK     ✓  Security review complete     ✓  Accessibility checked     ✓  Deployed to staging" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="308" y="466" width="620" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Gate 4: Business Value -->
+        <mxCell id="g4_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#34D399;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="562" width="980" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g4_gate" value="GATE 4" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontColor=#34D399;fontStyle=1;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="72" y="570" width="60" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="g4_title" value="Business Value Delivered" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="72" y="588" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="g4_checks" value="✓  Value layer verified (Business / User / Technical)     ✓  KPI baseline recorded     ✓  Stakeholder notified" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="308" y="586" width="620" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Fail path label -->
+        <mxCell id="fail_label" value="Any gate fails →" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontSize=11;fontColor=#EF4444;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="680" y="672" width="148" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fail_action" value="Return to In Progress  ·  Create a fix task  ·  Re-enter from Gate 1" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#0B1220;strokeColor=#EF4444;fontColor=#EF4444;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="660" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- DONE -->
+        <mxCell id="done" value="All gates passed  ·  Task is DONE  ·  Move to Done column" style="ellipse;whiteSpace=wrap;html=1;fillColor=#34D399;strokeColor=#0B1220;fontColor=#0B1220;fontSize=13;fontStyle=1;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="724" width="600" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e0" edge="1" source="s0" target="g1_bg" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" source="g1_bg" target="g2_bg" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" source="g2_bg" target="g3_bg" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" source="g3_bg" target="g4_bg" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" source="g4_bg" target="done" parent="1" style="curved=1;html=1;strokeColor=#34D399;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

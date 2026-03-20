@@ -1,0 +1,136 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="cycle-structure" name="Typical Cycle Structure">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="600" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background card -->
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="552" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="Typical Goal Cycle Structure" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="38" width="1052" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="No gap between cycles  ·  The next cycle begins immediately after the retrospective" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="24" y="66" width="1052" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Timeline track -->
+        <mxCell id="track" value="" style="rounded=1;arcSize=50;fillColor=#1E293B;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="196" width="940" height="12" as="geometry" />
+        </mxCell>
+
+        <!-- Milestone 1: Day 1 — x=100 -->
+        <mxCell id="m1_dot" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#14B8A6;strokeColor=#0F172A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="82" y="184" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m1_lbl" value="Day 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m1_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#14B8A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="44" y="248" width="200" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="m1_icon" value="🎯" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="44" y="258" width="200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m1_t" value="Smart Planning Session" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="44" y="298" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m1_d" value="Goals defined (1–3 primary)&#xa;WIP limits calculated &amp; set&#xa;Initial tasks identified&#xa;Flow Board seeded&#xa;Cycle officially begins" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="52" y="330" width="184" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Milestone 2: Days 1–N — x=320 -->
+        <mxCell id="m2_dot" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#06B6D4;strokeColor=#0F172A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="302" y="184" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_lbl" value="Days 1 – N" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#06B6D4;" vertex="1" parent="1">
+          <mxGeometry x="276" y="150" width="88" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#06B6D4;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="260" y="248" width="200" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_icon" value="⚡" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="260" y="258" width="200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_t" value="Continuous Delivery" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#06B6D4;" vertex="1" parent="1">
+          <mxGeometry x="260" y="298" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_d" value="Daily Flow Sync (15 min max)&#xa;Board walked right-to-left&#xa;Blockers escalated per protocol&#xa;WIP enforced strictly&#xa;Backlog kept ≥ 2 cycles ready" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="268" y="330" width="184" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Milestone 3: Mid-Cycle — x=540 -->
+        <mxCell id="m3_dot" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F59E0B;strokeColor=#0F172A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="522" y="184" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m3_lbl" value="Mid-Cycle" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="496" y="150" width="88" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m3_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#F59E0B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="248" width="200" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="m3_icon" value="🗂" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="480" y="258" width="200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m3_t" value="Backlog Grooming" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="480" y="298" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m3_opt" value="optional" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#F59E0B;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="322" width="200" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="m3_d" value="Recommended if cycle &gt; 1 week&#xa;Refine upcoming tasks&#xa;Validate DoR on next items&#xa;Re-size estimates if needed&#xa;Ensure ≥ 2 cycles of Ready" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="488" y="342" width="184" height="148" as="geometry" />
+        </mxCell>
+
+        <!-- Milestone 4: Final Day — x=760 -->
+        <mxCell id="m4_dot" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#0284C7;strokeColor=#0F172A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="742" y="184" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m4_lbl" value="Final Day" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#0284C7;" vertex="1" parent="1">
+          <mxGeometry x="720" y="150" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m4_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="700" y="248" width="200" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="m4_icon" value="✅" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="700" y="258" width="200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m4_t" value="Goal Review" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#0284C7;" vertex="1" parent="1">
+          <mxGeometry x="700" y="298" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m4_d" value="All primary goals vs DoD&#xa;Stakeholder demo&#xa;Secondary goals assessed&#xa;Cycle Accuracy Index recorded&#xa;Cycle officially closed" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="708" y="330" width="184" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Milestone 5: Day After — x=980 -->
+        <mxCell id="m5_dot" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#34D399;strokeColor=#0F172A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="962" y="184" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m5_lbl" value="Day After" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="940" y="150" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m5_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#34D399;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="920" y="248" width="200" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="m5_icon" value="🔁" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="920" y="258" width="200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="m5_t" value="Retrospective" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="920" y="298" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m5_d" value="Flow metrics reviewed&#xa;Blockers analyzed by type&#xa;Max 3 improvements selected&#xa;Improvements get owner + deadline&#xa;→ New Smart Planning begins" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="928" y="330" width="184" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Duration note -->
+        <mxCell id="dur" value="Cycle Duration:  1 week (clear scope, experienced team)  ·  2 weeks (standard)  ·  3 weeks (complex goals with dependencies)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#475569;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="24" y="532" width="1052" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
