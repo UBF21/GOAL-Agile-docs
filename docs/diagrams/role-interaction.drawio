@@ -1,0 +1,105 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="role-interaction" name="GOAL Role Interaction">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="640" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background card -->
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="592" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="GOAL Role Interaction Map" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="36" width="1052" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- ── THREE ROLE CARDS ── -->
+
+        <!-- Flow Master (LEFT) -->
+        <mxCell id="fm_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#06B6D4;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="56" y="200" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="fm_icon" value="🔀" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=32;" vertex="1" parent="1">
+          <mxGeometry x="56" y="214" width="240" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="fm_title" value="Flow Master" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=15;fontStyle=1;fontColor=#06B6D4;" vertex="1" parent="1">
+          <mxGeometry x="56" y="262" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="fm_role" value="Scrum Master equivalent" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#475569;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="56" y="288" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fm_desc" value="Guards process &amp; flow&#xa;Enforces WIP limits&#xa;Removes blockers&#xa;Facilitates all events&#xa;Tracks flow metrics" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="64" y="316" width="224" height="112" as="geometry" />
+        </mxCell>
+
+        <!-- Product Strategist (RIGHT) -->
+        <mxCell id="ps_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#14B8A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="804" y="200" width="240" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ps_icon" value="🎯" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=32;" vertex="1" parent="1">
+          <mxGeometry x="804" y="214" width="240" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="ps_title" value="Product Strategist" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=15;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="804" y="262" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="ps_role" value="Product Owner equivalent" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#475569;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="804" y="288" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ps_desc" value="Owns value &amp; backlog&#xa;Defines goals (P-S-T format)&#xa;Prioritizes by value score&#xa;Stakeholder liaison&#xa;Manages GoalLog" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="812" y="316" width="224" height="112" as="geometry" />
+        </mxCell>
+
+        <!-- Delivery Team (BOTTOM CENTER) -->
+        <mxCell id="dt_card" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#34D399;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="430" y="400" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_icon" value="👥" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=32;" vertex="1" parent="1">
+          <mxGeometry x="430" y="414" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_title" value="Delivery Team" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=15;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="430" y="454" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_desc" value="Self-organizes execution&#xa;Pulls tasks (never pushed)&#xa;Raises blockers immediately" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="438" y="484" width="224" height="72" as="geometry" />
+        </mxCell>
+
+        <!-- Events center node -->
+        <mxCell id="ev" value="All 3 roles collaborate&#xa;in GOAL Events" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#14B8A6;fontColor=#F8FAFC;fontSize=12;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="406" y="258" width="288" height="56" as="geometry" />
+        </mxCell>
+
+        <!-- ── RELATIONSHIP EDGES ── -->
+        <!-- FM → Events -->
+        <mxCell id="r1" value="facilitates" edge="1" source="fm_card" target="ev" parent="1" style="curved=1;html=1;strokeColor=#06B6D4;fontColor=#06B6D4;fontSize=10;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- PS → Events -->
+        <mxCell id="r2" value="defines goals" edge="1" source="ps_card" target="ev" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;fontColor=#14B8A6;fontSize=10;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Events → DT (delivers) -->
+        <mxCell id="r3" value="commits &amp; delivers" edge="1" source="dt_card" target="ev" parent="1" style="curved=1;html=1;strokeColor=#34D399;fontColor=#34D399;fontSize=10;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- FM → DT (unblocks) -->
+        <mxCell id="r4" value="unblocks" edge="1" source="fm_card" target="dt_card" parent="1" style="curved=1;html=1;strokeColor=#06B6D4;fontColor=#94A3B8;fontSize=9;strokeWidth=1.5;dashed=1;dashPattern=6 3;endArrow=open;endFill=0;exitX=0.75;exitY=1;entryX=0;entryY=0.3;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- DT → FM (raises blockers) -->
+        <mxCell id="r5" value="raises blockers" edge="1" source="dt_card" target="fm_card" parent="1" style="curved=1;html=1;strokeColor=#EF4444;fontColor=#94A3B8;fontSize=9;strokeWidth=1.5;dashed=1;dashPattern=6 3;endArrow=open;endFill=0;exitX=0;entryX=0.25;entryY=1;exitY=0.3;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- PS → DT (clarifies) -->
+        <mxCell id="r6" value="clarifies scope" edge="1" source="ps_card" target="dt_card" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;fontColor=#94A3B8;fontSize=9;strokeWidth=1.5;dashed=1;dashPattern=6 3;endArrow=open;endFill=0;exitX=0.25;exitY=1;entryX=1;entryY=0.3;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- DT → PS (delivers value) -->
+        <mxCell id="r7" value="delivers value" edge="1" source="dt_card" target="ps_card" parent="1" style="curved=1;html=1;strokeColor=#34D399;fontColor=#94A3B8;fontSize=9;strokeWidth=1.5;dashed=1;dashPattern=6 3;endArrow=open;endFill=0;exitX=1;entryX=0.75;entryY=1;exitY=0.3;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

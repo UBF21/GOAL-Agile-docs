@@ -1,0 +1,165 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="flow-board-columns" name="Standard Flow Board Columns">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="640" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background card -->
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="592" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="Standard Flow Board Columns" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="38" width="1052" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="Tasks flow left → right  ·  WIP is counted only in In Progress + Code Review + Validation" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="24" y="66" width="1052" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Flow arrow across columns -->
+        <mxCell id="flow_arrow" value="" style="edgeStyle=none;html=1;strokeColor=#1E293B;strokeWidth=3;endArrow=block;endFill=1;entryX=1;entryY=0.5;exitX=0;exitY=0.5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62" y="168" as="sourcePoint" />
+            <mxPoint x="1038" y="168" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Column 1: Backlog -->
+        <mxCell id="c1_bg" value="" style="rounded=1;arcSize=6;fillColor=#0B1220;strokeColor=#475569;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="62" y="120" width="162" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_h" value="" style="rounded=1;arcSize=6;fillColor=#1E293B;strokeColor=#475569;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="62" y="120" width="162" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_t" value="Backlog" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="62" y="130" width="162" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_d" value="Items that exist but are NOT yet ready to execute. Missing acceptance criteria or sizing estimate." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#475569;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="70" y="174" width="146" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Column 2: Ready -->
+        <mxCell id="c2_bg" value="" style="rounded=1;arcSize=6;fillColor=#0B1220;strokeColor=#0284C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="162" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_h" value="" style="rounded=1;arcSize=6;fillColor=#0D1B2E;strokeColor=#0284C7;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="162" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_t" value="Ready" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#0284C7;" vertex="1" parent="1">
+          <mxGeometry x="240" y="130" width="162" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_d" value="Meets DoR — has AC, P-S-T format, and a size estimate. Can be pulled immediately by any team member." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="248" y="174" width="146" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Column 3: In Progress -->
+        <mxCell id="c3_bg" value="" style="rounded=1;arcSize=6;fillColor=#0B1220;strokeColor=#14B8A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="418" y="120" width="162" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_h" value="" style="rounded=1;arcSize=6;fillColor=#0B1C1C;strokeColor=#14B8A6;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="418" y="120" width="162" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_t" value="In Progress" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="418" y="130" width="162" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_wip" value="WIP counted ✓" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#14B8A6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="418" y="152" width="162" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_d" value="Actively being worked on. Counts against the team WIP limit. Only one owner per task." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="426" y="174" width="146" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Column 4: Code Review -->
+        <mxCell id="c4_bg" value="" style="rounded=1;arcSize=6;fillColor=#0B1220;strokeColor=#F59E0B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="596" y="120" width="162" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_h" value="" style="rounded=1;arcSize=6;fillColor=#1A1200;strokeColor=#F59E0B;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="596" y="120" width="162" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_t" value="Code Review" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="596" y="130" width="162" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_wip" value="WIP counted ✓" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#F59E0B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="596" y="152" width="162" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_d" value="Implementation complete. Waiting for peer review. Review must result in formal approval — not verbal." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="604" y="174" width="146" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Column 5: Validation -->
+        <mxCell id="c5_bg" value="" style="rounded=1;arcSize=6;fillColor=#0B1220;strokeColor=#8B5CF6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="774" y="120" width="162" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_h" value="" style="rounded=1;arcSize=6;fillColor=#130F20;strokeColor=#8B5CF6;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="774" y="120" width="162" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_t" value="Validation" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#8B5CF6;" vertex="1" parent="1">
+          <mxGeometry x="774" y="130" width="162" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_wip" value="WIP counted ✓" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#8B5CF6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="774" y="152" width="162" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_d" value="Code review approved. Being tested in staging or QA. Local-only validation does not count." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="782" y="174" width="146" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Column 6: Done -->
+        <mxCell id="c6_bg" value="" style="rounded=1;arcSize=6;fillColor=#0B1220;strokeColor=#34D399;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="952" y="120" width="112" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="c6_h" value="" style="rounded=1;arcSize=6;fillColor=#0B1C12;strokeColor=#34D399;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="952" y="120" width="112" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c6_t" value="Done" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="952" y="130" width="112" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c6_d" value="Meets all DoD criteria. No exceptions. Archived or added to demo list." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="960" y="174" width="96" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Special Lanes section -->
+        <mxCell id="sl_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#334155;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="62" y="444" width="1014" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="sl_t" value="Special Lanes" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="78" y="454" width="200" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Blocked -->
+        <mxCell id="sl1_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#EF4444;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="78" y="486" width="296" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sl1_t" value="🚫  Blocked" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="92" y="494" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sl1_d" value="Tasks that cannot progress due to external factors. Move immediately — not optional. Does NOT count against WIP." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="92" y="516" width="272" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Expedite -->
+        <mxCell id="sl2_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#F59E0B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="404" y="486" width="296" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sl2_t" value="⚡  Expedite" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="418" y="494" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sl2_d" value="Urgent tasks requiring immediate delivery. Max 1 active at any time. Joint approval by FM + PS required." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="418" y="516" width="272" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Technical Debt -->
+        <mxCell id="sl3_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#8B5CF6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="730" y="486" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sl3_t" value="🔧  Technical Debt" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#8B5CF6;" vertex="1" parent="1">
+          <mxGeometry x="744" y="494" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sl3_d" value="Separate lane for visibility. Enforces 10–20% capacity allocation. Reviewed at each Retrospective." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="744" y="516" width="308" height="44" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

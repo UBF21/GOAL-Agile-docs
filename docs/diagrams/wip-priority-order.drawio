@@ -1,0 +1,141 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="wip-priority-order" name="WIP Full Priority Order">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="740" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background card -->
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="692" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="What To Do When WIP Is Full" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="38" width="1052" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="Priority order when a team member has no active task and the WIP limit is reached" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="24" y="66" width="1052" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1 — Unblock -->
+        <mxCell id="s1_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#EF4444;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="104" width="756" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_num" value="01" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=28;fontStyle=1;fontColor=#EF4444;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="72" y="112" width="56" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_icon" value="🚫" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="128" y="120" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_t" value="Help unblock a task in the Blocked column" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="176" y="112" width="480" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_d" value="Swarm to remove the blocker — external escalation, knowledge transfer, or pair debugging" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="176" y="138" width="628" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2 — Code Review -->
+        <mxCell id="s2_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#F59E0B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="192" width="756" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_num" value="02" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=28;fontStyle=1;fontColor=#F59E0B;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="72" y="200" width="56" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_icon" value="🔍" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="128" y="208" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_t" value="Perform a code review on a task in Code Review" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="176" y="200" width="480" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_d" value="Review thoroughly — this unblocks the entire task from moving to Validation and ultimately to Done" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="176" y="226" width="628" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3 — Validate -->
+        <mxCell id="s3_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#8B5CF6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="756" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_num" value="03" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=28;fontStyle=1;fontColor=#8B5CF6;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="72" y="288" width="56" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_icon" value="🧪" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="128" y="296" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_t" value="Help validate a task in the Validation column" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#8B5CF6;" vertex="1" parent="1">
+          <mxGeometry x="176" y="288" width="480" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_d" value="Test in staging, run acceptance scenarios, or verify against acceptance criteria" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="176" y="314" width="628" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4 — Pair -->
+        <mxCell id="s4_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#14B8A6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="368" width="756" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_num" value="04" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=28;fontStyle=1;fontColor=#14B8A6;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="72" y="376" width="56" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_icon" value="👥" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="128" y="384" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_t" value="Pair program with a teammate on their active task" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="176" y="376" width="480" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_d" value="Two people on one task accelerates completion and improves quality — still counts against one WIP slot" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="176" y="402" width="628" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 5 — Technical Debt -->
+        <mxCell id="s5_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#06B6D4;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="456" width="756" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_num" value="05" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=28;fontStyle=1;fontColor=#06B6D4;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="72" y="464" width="56" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_icon" value="🔧" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="128" y="472" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_t" value="Work on items in the Technical Debt lane" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#06B6D4;" vertex="1" parent="1">
+          <mxGeometry x="176" y="464" width="480" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_d" value="10–20% of capacity should go to technical debt — this is the right moment to use it" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="176" y="490" width="628" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 6 — Last Resort -->
+        <mxCell id="s6_bg" value="" style="rounded=1;arcSize=8;fillColor=#0B1220;strokeColor=#334155;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="544" width="756" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_num" value="06" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=28;fontStyle=1;fontColor=#334155;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="72" y="552" width="56" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_icon" value="📋" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="128" y="560" width="36" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_t" value="Pick a new task from Ready  —  last resort only" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="176" y="552" width="480" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_d" value="Only when none of the above options exist. Pulling new work while WIP is full violates the core GOAL principle." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="176" y="578" width="628" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Right principle panel -->
+        <mxCell id="pr_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#14B8A6;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="856" y="104" width="220" height="512" as="geometry" />
+        </mxCell>
+        <mxCell id="pr_t" value="Core Principle" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=13;fontStyle=1;fontColor=#14B8A6;" vertex="1" parent="1">
+          <mxGeometry x="856" y="116" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="pr_body" value="Finish before Starting&#xa;&#xa;The most valuable action when WIP is full is helping existing work reach Done.&#xa;&#xa;Starting new work while tasks are stuck in review or blocked does not increase throughput — it increases multitasking and context switching.&#xa;&#xa;Flow is created by completing work, not by starting it." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="868" y="152" width="196" height="440" as="geometry" />
+        </mxCell>
+
+        <!-- Bottom rule -->
+        <mxCell id="bottom" value="Notify the Flow Master immediately if the WIP limit is exceeded or if none of the 6 options are available" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#0B1220;strokeColor=#334155;fontColor=#475569;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="636" width="980" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

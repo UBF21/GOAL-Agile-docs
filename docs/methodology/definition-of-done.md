@@ -5,6 +5,9 @@ sidebar_position: 7
 description: The two-level Definition of Done in GOAL — baseline criteria, extended criteria, management rules, and DoD vs acceptance criteria.
 ---
 
+import Drawio from '@theme/Drawio'
+import Level1DoDDiagram from '!!raw-loader!../diagrams/level1-dod.drawio'
+
 # Definition of Done
 
 The Definition of Done (DoD) is a checklist that a task must fully satisfy before it can move to the Done column. Without a DoD, "done" means something different to every person on the team. The DoD eliminates ambiguity.
@@ -20,6 +23,8 @@ The Definition of Done (DoD) is a checklist that a task must fully satisfy befor
 GOAL uses two levels of Definition of Done:
 
 ### Level 1 — Baseline DoD (Mandatory for All GOAL Teams)
+
+<Drawio content={Level1DoDDiagram} />
 
 This applies to every task, without exception:
 

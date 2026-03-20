@@ -1,0 +1,110 @@
+<mxfile host="Claude" version="1.0">
+  <diagram id="interrupt-protocol" name="Interrupt Management Protocol">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="840" math="0" shadow="0" background="#0B1220">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background card -->
+        <mxCell id="bg" value="" style="rounded=1;arcSize=4;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1052" height="792" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="Interrupt Management Protocol" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#F8FAFC;" vertex="1" parent="1">
+          <mxGeometry x="24" y="38" width="1052" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="Every incoming request must be classified before any action is taken" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="24" y="66" width="1052" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- START -->
+        <mxCell id="s0" value="Interrupt Arrives" style="ellipse;whiteSpace=wrap;html=1;fillColor=#14B8A6;strokeColor=#0B1220;fontColor=#0B1220;fontSize=14;fontStyle=1;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="406" y="108" width="288" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- D1: Production Down? -->
+        <mxCell id="d1" value="Production system&#xa;failing for users?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#EF4444;fontColor=#F8FAFC;fontSize=12;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="200" width="260" height="96" as="geometry" />
+        </mxCell>
+
+        <!-- P1 -->
+        <mxCell id="p1_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#EF4444;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="756" y="200" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_badge" value="P1 — Critical" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;fontStyle=1;fontColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="772" y="212" width="248" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_desc" value="🔴  Stop all work immediately&#xa;Alert team in real time&#xa;All hands on deck&#xa;Update every 30 min&#xa;SLA: resolved within 4h" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="772" y="244" width="252" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- D2: Urgent business? -->
+        <mxCell id="d2" value="Documented business&#xa;impact if not resolved&#xa;within 1–5 days?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#F59E0B;fontColor=#F8FAFC;fontSize=12;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="348" width="260" height="96" as="geometry" />
+        </mxCell>
+
+        <!-- P2 -->
+        <mxCell id="p2_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#F59E0B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="756" y="348" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_badge" value="P2 — Urgent" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;fontStyle=1;fontColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="772" y="360" width="248" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_desc" value="🟡  FM + PS jointly approve&#xa;Document business justification&#xa;Enter Expedite lane if approved&#xa;24h SLA to start&#xa;No more than 1 active P2" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="772" y="392" width="252" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- D3: Can wait? -->
+        <mxCell id="d3" value="Can wait for the&#xa;next Goal Cycle?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#34D399;fontColor=#F8FAFC;fontSize=12;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="496" width="260" height="96" as="geometry" />
+        </mxCell>
+
+        <!-- P3 -->
+        <mxCell id="p3_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#34D399;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="756" y="496" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_badge" value="P3 — Normal" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;fontStyle=1;fontColor=#34D399;" vertex="1" parent="1">
+          <mxGeometry x="772" y="508" width="248" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_desc" value="🟢  Add to product backlog&#xa;Product Strategist prioritizes&#xa;Include in next Smart Planning&#xa;Acknowledge requester&#xa;No cycle disruption" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#94A3B8;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="772" y="540" width="252" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Defer/Reject -->
+        <mxCell id="rej_bg" value="" style="rounded=1;arcSize=8;fillColor=#1E293B;strokeColor=#334155;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="64" y="496" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rej_badge" value="Defer / Reject" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#94A3B8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="508" width="248" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="rej_desc" value="📋  Not in scope for this cycle&#xa;Explain timeline to requester&#xa;Log in interrupt register" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#475569;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="534" width="252" height="68" as="geometry" />
+        </mxCell>
+
+        <!-- ── EDGES ── -->
+        <mxCell id="e1" edge="1" source="s0" target="d1" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="Yes" edge="1" source="d1" target="p1_bg" parent="1" style="curved=1;html=1;strokeColor=#EF4444;fontColor=#EF4444;fontSize=11;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="No" edge="1" source="d1" target="d2" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;fontColor=#94A3B8;fontSize=11;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Yes" edge="1" source="d2" target="p2_bg" parent="1" style="curved=1;html=1;strokeColor=#F59E0B;fontColor=#F59E0B;fontSize=11;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="No" edge="1" source="d2" target="d3" parent="1" style="curved=1;html=1;strokeColor=#14B8A6;fontColor=#94A3B8;fontSize=11;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="Yes" edge="1" source="d3" target="p3_bg" parent="1" style="curved=1;html=1;strokeColor=#34D399;fontColor=#34D399;fontSize=11;fontStyle=1;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="No" edge="1" source="d3" target="rej_bg" parent="1" style="curved=1;html=1;strokeColor=#334155;fontColor=#94A3B8;fontSize=11;fontStyle=1;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

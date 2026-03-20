@@ -51,6 +51,7 @@
   background: #040f1c;
   padding: 8rem 1.5rem 6rem;
   text-align: center;
+  z-index: 1;
 }
 
 .heroGrid {
@@ -281,6 +282,8 @@
 /* ===== FEATURES SECTION ===== */
 
 .featuresSection {
+  position: relative;
+  z-index: 1;
   padding: 5.5rem 1.5rem;
   background: #070f18;
   background-image: radial-gradient(circle, rgba(2,132,199,0.12) 1px, transparent 1px);
@@ -388,9 +391,10 @@
 /* ===== MANIFESTO SECTION ===== */
 
 .manifestoSection {
+  position: relative;
+  z-index: 1;
   padding: 5rem 1.5rem;
   background: #0a0f1a;
-  position: relative;
 }
 
 .manifestoDivider {
@@ -477,6 +481,8 @@
 /* ===== COMPARISON SECTION ===== */
 
 .comparisonSection {
+  position: relative;
+  z-index: 1;
   padding: 5rem 1.5rem 6rem;
   background: #070f18;
 }
@@ -489,16 +495,24 @@
   margin: 0 auto 3rem;
 }
 
+/* Scroll wrapper for mobile */
+.comparisonTableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--ifm-toc-border-color);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+}
+
 /* grid: dim | scrum | kanban | goal */
 .comparisonGrid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  border-radius: 16px;
+  min-width: 580px;
   overflow: hidden;
-  border: 1px solid var(--ifm-toc-border-color);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  border-radius: 16px;
 }
 
 /* ── header row ── */
@@ -605,11 +619,12 @@
 /* ===== AUTHOR SECTION ===== */
 
 .authorSection {
+  position: relative;
+  z-index: 1;
   padding: 5rem 1.5rem;
   background: #070f18;
   border-top: none;
   border-bottom: none;
-  position: relative;
 }
 
 .authorInner {
@@ -744,6 +759,8 @@
 /* ===== FOOTER CTA SECTION ===== */
 
 .footerCtaSection {
+  position: relative;
+  z-index: 1;
   padding: 6rem 0;
   background: linear-gradient(135deg, #0B1220 0%, #0F2040 100%);
   color: #ffffff;
@@ -776,15 +793,219 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
+/* ── TABLET (≤ 996px already handles featuresGrid, add layout fixes) ── */
+@media (max-width: 996px) {
+  .hero {
+    padding: 6.5rem 1.5rem 5rem;
+  }
+
+  .footerCtaSection {
+    padding: 5rem 1.5rem;
+  }
+
+  .footerCtaTitle {
+    font-size: 2rem;
+  }
+
+  .featuresSection,
+  .manifestoSection,
+  .comparisonSection,
+  .authorSection {
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* ── TABLET PORTRAIT / LARGE PHONE (≤ 768px) ── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 5.5rem 1.25rem 4rem;
+  }
+
+  .heroStat {
+    padding: 0.7rem 1.5rem;
+  }
+
+  .featuresSection,
+  .manifestoSection,
+  .comparisonSection,
+  .authorSection {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .footerCtaSection {
+    padding: 4rem 1.25rem;
+  }
+
+  .footerCtaTitle {
+    font-size: 1.75rem;
+  }
+
   .footerCtaButtons {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+  }
+
+  .footerCtaButtons a {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    font-size: 1.65rem;
+  }
+
+  .manifestoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── MOBILE (≤ 600px) ── */
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 4.5rem 1rem 3.5rem;
+  }
+
+  .heroStats {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .heroStat {
+    padding: 0.65rem 1rem;
+  }
+
+  .heroStatDivider {
+    display: none;
+  }
+
+  .footerCtaTitle {
+    font-size: 1.45rem;
+  }
+
+  .footerCtaSection {
+    padding: 3.5rem 1rem;
+  }
+
+  .footerCtaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerCtaButtons a {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .comparisonSubtitle,
+  .manifestoSubtitle {
+    font-size: 0.92rem;
+  }
+
+  .authorName {
+    font-size: 1.1rem;
+  }
+
+  .featuresSection,
+  .manifestoSection,
+  .comparisonSection,
+  .authorSection {
+    padding: 3rem 1rem;
   }
 }
 
 /* ===== LIGHT MODE OVERRIDES ===== */
 
+/* ── Hero ── */
+[data-theme='light'] .hero {
+  background: linear-gradient(160deg, #e0f2fe 0%, #f0f9ff 50%, #ecfdf5 100%);
+}
+
+[data-theme='light'] .heroGrid {
+  background-image:
+    linear-gradient(rgba(2,132,199,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2,132,199,0.06) 1px, transparent 1px);
+  opacity: 0.8;
+}
+
+[data-theme='light'] .heroOrb1 {
+  background: radial-gradient(ellipse at center, rgba(2,132,199,0.18) 0%, transparent 65%);
+}
+
+[data-theme='light'] .heroOrb2 {
+  background: radial-gradient(ellipse at center, rgba(20,184,166,0.14) 0%, transparent 65%);
+}
+
+[data-theme='light'] .heroOrb3 {
+  background: radial-gradient(ellipse at center, rgba(6,182,212,0.1) 0%, transparent 65%);
+}
+
+[data-theme='light'] .heroTitle {
+  background: linear-gradient(135deg, #0B1220 0%, #0284C7 50%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme='light'] .heroTagline {
+  color: #475569;
+}
+
+[data-theme='light'] .heroTaglineComment {
+  color: #0284C7;
+}
+
+[data-theme='light'] .heroStats {
+  background: rgba(2,132,199,0.06);
+  border-color: rgba(2,132,199,0.22);
+}
+
+[data-theme='light'] .heroStatValue {
+  color: #0f172a;
+}
+
+[data-theme='light'] .heroStatLabel {
+  color: #64748b;
+}
+
+[data-theme='light'] .heroStatDivider {
+  background: rgba(2,132,199,0.2);
+}
+
+[data-theme='light'] .btnSecondary {
+  color: #0284C7 !important;
+  border-color: rgba(2,132,199,0.45) !important;
+}
+
+[data-theme='light'] .btnSecondary:hover {
+  background: rgba(2,132,199,0.08) !important;
+  border-color: rgba(2,132,199,0.7) !important;
+  color: #0270A8 !important;
+}
+
+/* ── Footer CTA ── */
+[data-theme='light'] .footerCtaSection {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  color: #0f172a;
+}
+
+[data-theme='light'] .footerCtaTitle {
+  color: #0f172a !important;
+}
+
+[data-theme='light'] .footerCtaText {
+  color: #475569 !important;
+}
+
+/* ── Features ── */
 [data-theme='light'] .featuresSection {
   background: #f0f9ff;
   background-image: radial-gradient(circle, rgba(2,132,199,0.08) 1px, transparent 1px);

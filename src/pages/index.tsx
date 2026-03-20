@@ -1,12 +1,46 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
+import type { ReactNode } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import ParticlesBackground from '../components/ParticlesBackground';
 
 import styles from './index.module.css';
 
+/* ─────────────────────────────────────────────
+   HERO
+   ───────────────────────────────────────────── */
 function HeroSection() {
+  const badgeRef  = useRef<HTMLDivElement>(null);
+  const titleRef  = useRef<HTMLHeadingElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
+  const statsRef  = useRef<HTMLDivElement>(null);
+  const ctaRef    = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let tl: any;
+    import('gsap').then(({ gsap }) => {
+      const badge  = badgeRef.current;
+      const title  = titleRef.current;
+      const tag    = taglineRef.current;
+      const stats  = statsRef.current;
+      const cta    = ctaRef.current;
+      if (!badge || !title || !tag || !stats || !cta) return;
+
+      // Set initial states BEFORE building the timeline
+      gsap.set([badge, title],       { y: 32,  autoAlpha: 0 });
+      gsap.set([tag, stats, cta],    { y: 20,  autoAlpha: 0 });
+
+      tl = gsap.timeline({ delay: 0.15 });
+      tl.to(badge,  { y: 0, autoAlpha: 1, duration: 0.55, ease: 'power2.out' })
+        .to(title,  { y: 0, autoAlpha: 1, duration: 0.85, ease: 'power3.out' }, '-=0.2')
+        .to(tag,    { y: 0, autoAlpha: 1, duration: 0.65, ease: 'power2.out' }, '-=0.5')
+        .to(stats,  { y: 0, autoAlpha: 1, duration: 0.55, ease: 'power2.out' }, '-=0.4')
+        .to(cta,    { y: 0, autoAlpha: 1, duration: 0.55, ease: 'power2.out' }, '-=0.3');
+    });
+    return () => { tl?.kill(); };
+  }, []);
+
   return (
     <header className={styles.hero}>
       <div className={styles.heroGrid} />
@@ -14,15 +48,15 @@ function HeroSection() {
       <div className={styles.heroOrb2} />
       <div className={styles.heroOrb3} />
       <div className={styles.heroInner}>
-        <div className={styles.heroBadge}>
+        <div ref={badgeRef} className={styles.heroBadge}>
           <span className={styles.heroBadgePulse} />
           v0.2 · Open Methodology
         </div>
-        <h1 className={styles.heroTitle}>GOAL</h1>
-        <p className={styles.heroTagline}>
+        <h1 ref={titleRef} className={styles.heroTitle}>GOAL</h1>
+        <p ref={taglineRef} className={styles.heroTagline}>
           <span className={styles.heroTaglineComment}>//</span>{' '}adaptive agile framework
         </p>
-        <div className={styles.heroStats}>
+        <div ref={statsRef} className={styles.heroStats}>
           <div className={styles.heroStat}>
             <span className={styles.heroStatValue}>5</span>
             <span className={styles.heroStatLabel}>core values</span>
@@ -38,7 +72,7 @@ function HeroSection() {
             <span className={styles.heroStatLabel}>+ Kanban</span>
           </div>
         </div>
-        <div className={styles.heroCta}>
+        <div ref={ctaRef} className={styles.heroCta}>
           <Link className={styles.btnPrimary} to="/docs/quick-start">
             Get started →
           </Link>
@@ -51,6 +85,39 @@ function HeroSection() {
   );
 }
 
+/* ─────────────────────────────────────────────
+   SCROLL-REVEAL HOOK
+   ───────────────────────────────────────────── */
+function useReveal(ref: React.RefObject<HTMLElement>, delay = 0) {
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let ctx: any;
+    import('gsap').then(async ({ gsap }) => {
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          el,
+          { y: 48, autoAlpha: 0 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.85,
+            delay,
+            ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+          }
+        );
+      });
+    });
+    return () => { ctx?.revert(); };
+  }, []);
+}
+
+/* ─────────────────────────────────────────────
+   FEATURES
+   ───────────────────────────────────────────── */
 type FeatureItem = {
   title: string;
   icon: string;
@@ -97,8 +164,34 @@ const features: FeatureItem[] = [
 ];
 
 function FeatureCard({ icon, title, description, index }: FeatureItem & { index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let ctx: any;
+    import('gsap').then(async ({ gsap }) => {
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          el,
+          { y: 40, autoAlpha: 0 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.7,
+            delay: index * 0.08,
+            ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+          }
+        );
+      });
+    });
+    return () => { ctx?.revert(); };
+  }, [index]);
+
   return (
-    <div className={styles.featureCard} style={{ animationDelay: `${index * 80}ms` }}>
+    <div ref={ref} className={styles.featureCard}>
       <span className={styles.featureNumber}>{String(index + 1).padStart(2, '0')}</span>
       <div className={styles.featureIconWrap}>
         <span className={styles.featureIconGlyph}>{icon}</span>
@@ -110,8 +203,10 @@ function FeatureCard({ icon, title, description, index }: FeatureItem & { index:
 }
 
 function FeaturesSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useReveal(sectionRef as any);
   return (
-    <section className={styles.featuresSection}>
+    <section ref={sectionRef} className={styles.featuresSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>What GOAL brings to your team</h2>
@@ -124,22 +219,26 @@ function FeaturesSection() {
   );
 }
 
+/* ─────────────────────────────────────────────
+   MANIFESTO
+   ───────────────────────────────────────────── */
 function ManifestoSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useReveal(sectionRef as any);
+
   const values = [
-    { left: 'Goals', right: 'Backlogs', desc: 'Commit to outcomes, not task lists' },
-    { left: 'Flow', right: 'Velocity', desc: 'Measure how work moves, not how much was planned' },
-    { left: 'Data', right: 'Estimates', desc: 'Use historical flow data, not abstract points' },
-    { left: 'Delivery', right: 'Activity', desc: 'Progress means value delivered, not work started' },
-    { left: 'Adaptation', right: 'Commitment Locking', desc: 'Plans evolve; goals persist' },
+    { left: 'Goals',      right: 'Backlogs',           desc: 'Commit to outcomes, not task lists' },
+    { left: 'Flow',       right: 'Velocity',            desc: 'Measure how work moves, not how much was planned' },
+    { left: 'Data',       right: 'Estimates',           desc: 'Use historical flow data, not abstract points' },
+    { left: 'Delivery',   right: 'Activity',            desc: 'Progress means value delivered, not work started' },
+    { left: 'Adaptation', right: 'Commitment Locking',  desc: 'Plans evolve; goals persist' },
   ];
 
   return (
-    <section className={styles.manifestoSection}>
+    <section ref={sectionRef} className={styles.manifestoSection}>
       <div className={styles.manifestoDivider} />
       <div className="container">
-        <h2 className={styles.sectionTitle}>
-          The GOAL Manifesto
-        </h2>
+        <h2 className={styles.sectionTitle}>The GOAL Manifesto</h2>
         <p className={styles.manifestoSubtitle}>
           Five values that guide every decision in the framework.
           When in doubt, check against the manifesto.
@@ -166,6 +265,9 @@ function ManifestoSection() {
   );
 }
 
+/* ─────────────────────────────────────────────
+   WHY GOAL
+   ───────────────────────────────────────────── */
 type ComparisonRow = {
   dimension: string;
   scrum: string;
@@ -174,74 +276,41 @@ type ComparisonRow = {
 };
 
 const comparisonRows: ComparisonRow[] = [
-  {
-    dimension: 'Cycle termination',
-    scrum: 'Calendar date',
-    kanban: 'N/A',
-    goal: 'Goals completed',
-  },
-  {
-    dimension: 'Scope flexibility',
-    scrum: 'Fixed during sprint',
-    kanban: 'Fully flexible',
-    goal: 'Tasks flexible, goals fixed',
-  },
-  {
-    dimension: 'Performance metric',
-    scrum: 'Velocity',
-    kanban: 'Throughput',
-    goal: 'Flow Efficiency + CAI',
-  },
-  {
-    dimension: 'Interrupt handling',
-    scrum: 'Sprint break',
-    kanban: 'Any time',
-    goal: 'P1/P2/P3 protocol',
-  },
-  {
-    dimension: 'Value measurement',
-    scrum: 'Not defined',
-    kanban: 'Not defined',
-    goal: '3-Layer Value Framework',
-  },
-  {
-    dimension: 'Technical debt',
-    scrum: 'Usually ignored',
-    kanban: 'Visible if tracked',
-    goal: '10–20% allocation, first-class',
-  },
+  { dimension: 'Cycle termination',  scrum: 'Calendar date',        kanban: 'N/A',              goal: 'Goals completed' },
+  { dimension: 'Scope flexibility',  scrum: 'Fixed during sprint',  kanban: 'Fully flexible',   goal: 'Tasks flexible, goals fixed' },
+  { dimension: 'Performance metric', scrum: 'Velocity',             kanban: 'Throughput',        goal: 'Flow Efficiency + CAI' },
+  { dimension: 'Interrupt handling', scrum: 'Sprint break',         kanban: 'Any time',          goal: 'P1/P2/P3 protocol' },
+  { dimension: 'Value measurement',  scrum: 'Not defined',          kanban: 'Not defined',       goal: '3-Layer Value Framework' },
+  { dimension: 'Technical debt',     scrum: 'Usually ignored',      kanban: 'Visible if tracked', goal: '10–20% allocation, first-class' },
 ];
 
 function WhyGoalSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useReveal(sectionRef as any);
   return (
-    <section className={styles.comparisonSection}>
+    <section ref={sectionRef} className={styles.comparisonSection}>
       <div className="container">
-        <h2 className={styles.sectionTitle}>
-          Why GOAL?
-        </h2>
+        <h2 className={styles.sectionTitle}>Why GOAL?</h2>
         <p className={styles.comparisonSubtitle}>
           GOAL synthesizes the structural benefits of Scrum with the flow intelligence of Kanban —
           and adds original contributions that neither framework provides.
         </p>
-
-        <div className={styles.comparisonGrid}>
-          {/* Header */}
-          <div className={styles.cmpHeaderCell}>Dimension</div>
-          <div className={styles.cmpHeaderCell}>Scrum</div>
-          <div className={styles.cmpHeaderCell}>Kanban</div>
-          <div className={styles.cmpHeaderCellGoal}>GOAL</div>
-
-          {/* Rows */}
-          {comparisonRows.map((row) => (
-            <div key={row.dimension} className={styles.cmpRow}>
-              <div className={styles.cmpDimension}>{row.dimension}</div>
-              <div className={styles.cmpCell}>{row.scrum}</div>
-              <div className={styles.cmpCell}>{row.kanban}</div>
-              <div className={styles.cmpCellGoal}>{row.goal}</div>
-            </div>
-          ))}
+        <div className={styles.comparisonTableWrap}>
+          <div className={styles.comparisonGrid}>
+            <div className={styles.cmpHeaderCell}>Dimension</div>
+            <div className={styles.cmpHeaderCell}>Scrum</div>
+            <div className={styles.cmpHeaderCell}>Kanban</div>
+            <div className={styles.cmpHeaderCellGoal}>GOAL</div>
+            {comparisonRows.map((row) => (
+              <div key={row.dimension} className={styles.cmpRow}>
+                <div className={styles.cmpDimension}>{row.dimension}</div>
+                <div className={styles.cmpCell}>{row.scrum}</div>
+                <div className={styles.cmpCell}>{row.kanban}</div>
+                <div className={styles.cmpCellGoal}>{row.goal}</div>
+              </div>
+            ))}
+          </div>
         </div>
-
         <div className={styles.comparisonCta}>
           <Link className="button button--outline button--primary" to="/docs/reference/comparison">
             Full Comparison Matrix →
@@ -252,9 +321,14 @@ function WhyGoalSection() {
   );
 }
 
+/* ─────────────────────────────────────────────
+   AUTHOR
+   ───────────────────────────────────────────── */
 function AuthorSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useReveal(sectionRef as any);
   return (
-    <section className={styles.authorSection}>
+    <section ref={sectionRef} className={styles.authorSection}>
       <div className="container">
         <div className={styles.authorInner}>
           <p className={styles.authorEyebrow}>About the author</p>
@@ -296,14 +370,17 @@ function AuthorSection() {
   );
 }
 
+/* ─────────────────────────────────────────────
+   FOOTER CTA
+   ───────────────────────────────────────────── */
 function FooterCtaSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useReveal(sectionRef as any);
   return (
-    <section className={styles.footerCtaSection}>
+    <section ref={sectionRef} className={styles.footerCtaSection}>
       <div className="container">
         <div className={styles.footerCtaContent}>
-          <h2 className={styles.footerCtaTitle}>
-            Ready to adopt GOAL?
-          </h2>
+          <h2 className={styles.footerCtaTitle}>Ready to adopt GOAL?</h2>
           <p className={styles.footerCtaText}>
             Start with the Quick Start guide to implement GOAL Phase 1 in your team this week.
             Or explore the full methodology documentation.
@@ -325,12 +402,16 @@ function FooterCtaSection() {
   );
 }
 
+/* ─────────────────────────────────────────────
+   PAGE
+   ───────────────────────────────────────────── */
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title} — Goal-Oriented Adaptive Lifecycle`}
       description="GOAL is an adaptive agile framework for software teams. Commit to outcomes, not task lists. Measure flow, not velocity. Replace story points with real flow data.">
+      <ParticlesBackground />
       <HeroSection />
       <main>
         <FeaturesSection />

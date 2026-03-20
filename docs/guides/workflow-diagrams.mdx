@@ -1,0 +1,97 @@
+---
+id: workflow-diagrams
+title: Workflow Diagrams
+sidebar_position: 3
+description: All GOAL workflow diagrams — Goal Cycle, Task State Machine, Interrupt Protocol, Blocked Task Escalation, and more.
+---
+
+import Drawio from '@theme/Drawio'
+import GoalCycleDiagram from '!!raw-loader!../diagrams/goal-cycle-lifecycle.drawio'
+import TaskStateDiagram from '!!raw-loader!../diagrams/task-state-machine.drawio'
+import InterruptDiagram from '!!raw-loader!../diagrams/interrupt-protocol.drawio'
+import BlockedDiagram from '!!raw-loader!../diagrams/blocked-escalation.drawio'
+import SmartPlanningDiagram from '!!raw-loader!../diagrams/smart-planning-process.drawio'
+import DailyFlowDiagram from '!!raw-loader!../diagrams/daily-flow-sync.drawio'
+import WipDiagram from '!!raw-loader!../diagrams/wip-enforcement.drawio'
+import DodDiagram from '!!raw-loader!../diagrams/definition-of-done.drawio'
+import ValueDiagram from '!!raw-loader!../diagrams/value-framework.drawio'
+
+# GOAL Workflow Diagrams
+
+All diagrams are interactive draw.io diagrams rendered natively in Docusaurus.
+
+---
+
+## 1. Goal Cycle Lifecycle
+
+This diagram shows the complete state machine of a GOAL Goal Cycle, from initiation through all possible closure paths.
+
+<Drawio content={GoalCycleDiagram} />
+
+---
+
+## 2. Task State Machine
+
+All possible states a single task can be in within GOAL, and the valid transitions between them.
+
+<Drawio content={TaskStateDiagram} />
+
+---
+
+## 3. Interrupt Management Protocol
+
+Complete decision process for handling any incoming request not in the backlog. Classifies every interrupt as P1, P2, or P3.
+
+<Drawio content={InterruptDiagram} />
+
+---
+
+## 4. Blocked Task Escalation
+
+Hour-by-hour escalation timeline for managing a blocked task from identification through resolution.
+
+<Drawio content={BlockedDiagram} />
+
+---
+
+## 5. Smart Planning Session Process
+
+Step-by-step flow for the Smart Planning Session, from backlog readiness check through cycle kickoff.
+
+<Drawio content={SmartPlanningDiagram} />
+
+---
+
+## 6. Daily Flow Sync Process
+
+The 15-minute board review flow led by the Flow Master every working day during an active cycle.
+
+<Drawio content={DailyFlowDiagram} />
+
+---
+
+## 7. WIP Limit Enforcement
+
+Decision tree for what a developer should do when the WIP limit is reached and no new task can be pulled.
+
+<Drawio content={WipDiagram} />
+
+---
+
+## 8. Definition of Done Validation
+
+Four-gate validation flow that every task must pass before moving to the Done column.
+
+<Drawio content={DodDiagram} />
+
+---
+
+## 9. Value Framework Classification
+
+Three-layer value scoring process used by the Product Strategist to prioritize goals and measure delivery impact.
+
+<Drawio content={ValueDiagram} />
+
+---
+
+*GOAL Workflow Diagrams v1.0 | Framework: GOAL v0.2 | Author: Felipe Montenegro*
